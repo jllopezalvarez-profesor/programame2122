@@ -2,6 +2,11 @@ package es.iesclaradelrey.programame2122.serie03;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * No aceptado.
+ *
+ */
 public class Problema336TiraAfloja {
 
 	private static Scanner sc = new Scanner(System.in);

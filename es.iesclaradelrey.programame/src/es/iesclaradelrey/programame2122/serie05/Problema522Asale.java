@@ -2,6 +2,11 @@ package es.iesclaradelrey.programame2122.serie05;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * No aceptado.
+ *
+ */
 public class Problema522Asale {
 
 	private static Scanner sc = new Scanner(System.in);

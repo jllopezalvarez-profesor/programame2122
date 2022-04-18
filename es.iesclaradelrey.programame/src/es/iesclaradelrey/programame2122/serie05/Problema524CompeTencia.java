@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+/**
+ * 
+ * No aceptado.
+ *
+ */
 public class Problema524CompeTencia {
 
 	private static Scanner sc = new Scanner(System.in);
@@ -26,7 +31,7 @@ public class Problema524CompeTencia {
 			Collections.sort(importesC);
 			compras.addAll(importesC.subList(0, numCompras - (minimoC + minimoT)));
 
-			int total = 0;
+			long total = 0;
 			for (Integer importe : compras) {
 				total += importe;
 			}

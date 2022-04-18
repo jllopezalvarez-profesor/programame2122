@@ -3,6 +3,11 @@ package es.iesclaradelrey.programame2122.serie04;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * 
+ * No aceptado.
+ *
+ */
 public class Problema478Conjuritis {
 	private static Scanner sc = new Scanner(System.in);
 
