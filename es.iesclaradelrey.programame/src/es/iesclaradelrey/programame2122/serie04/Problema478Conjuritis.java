@@ -16,31 +16,31 @@ public class Problema478Conjuritis {
 		int numHechizos;
 		while ((numHechizos = Integer.parseInt(sc.nextLine())) != 0) {
 			long danioEsperado = 0;
-			int[] hechizos = new int[numHechizos];
+			long[] hechizos = new long[numHechizos];
 			for (int i = 0; i < numHechizos; i++) {
-				int danioActual = Integer.parseInt(sc.next().trim());
+				long danioActual = Long.parseLong(sc.next().trim());
 				hechizos[i] = danioActual;
 				danioEsperado += danioActual;
 			}
 			sc.nextLine();
-			long danioCausado = Integer.parseInt(sc.nextLine());
+			long danioCausado = Long.parseLong(sc.nextLine());
 
 			buscarHechizosFallidos(hechizos, danioEsperado, danioCausado);
 		}
 
 	}
 
-	private static void buscarHechizosFallidos(int[] hechizos, long danioEsperado, long danioCausado) {
+	private static void buscarHechizosFallidos(long[] hechizos, long danioEsperado, long danioCausado) {
 		// Calculamos la diferencia entre daño causado y daño esperado.
-		// Podemos convertirlo con tranquilidad a int porque será la suma de dos
+		// Podemos convertirlo con tranquilidad a long porque será la suma de dos
 		// hechizos, con un valor máximo de 500000 cada uno
-		int diferencia = (int) (danioEsperado - danioCausado);
+		long diferencia = (long) (danioEsperado - danioCausado);
 
 		// En el caso menos favorable, podemos tener el hechizo de mayor valor con valor
 		// diferencia-1 y el de menor valor con valor 1.
-		int hechizoMayor = diferencia - 1;
-		int hechizoMenor = 1;
-
+		long hechizoMayor = diferencia - 1;
+		long hechizoMenor = 1;
+	
 		// Para evitar búsqueda de complejidad cuadrática "completa", vamos a buscar con
 		// búsqueda binaria la
 		// posición del hechizo mayor más próximo a la diferencia en el array
@@ -69,7 +69,7 @@ public class Problema478Conjuritis {
 		// que se haga entre la posición de inserción de la anterior búsqueda de menor a
 		// la posición del actual mayor - 1
 
-		int sumaHechizos = hechizoMayor + hechizoMenor;
+		long sumaHechizos = hechizoMayor + hechizoMenor;
 		while (sumaHechizos != diferencia) {
 			posHechizoMayor--;
 			hechizoMayor = hechizos[posHechizoMayor];
